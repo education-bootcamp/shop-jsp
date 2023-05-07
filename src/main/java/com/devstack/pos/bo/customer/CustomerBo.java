@@ -9,7 +9,7 @@ import java.util.List;
 public interface CustomerBo extends SuperBo {
     public void saveCustomer(CustomerDto dto);
     public CustomerDto findCustomer(long id);
-    public void updateCustomer(CustomerDto dto);
+    public void updateCustomer(CustomerDto dto) throws ClassNotFoundException;
     public void deleteCustomer(long id);
     public List<CustomerDto> findAllCustomers();
 }

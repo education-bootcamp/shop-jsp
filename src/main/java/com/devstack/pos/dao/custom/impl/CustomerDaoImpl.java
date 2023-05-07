@@ -8,7 +8,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class CustomerImpl implements CustomerDao {
+public class CustomerDaoImpl implements CustomerDao {
 
     public void save(Customer customer) {
         try (Session session = HibernateUtil.openSession()) {

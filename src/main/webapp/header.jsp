@@ -18,7 +18,7 @@
     </div>
     <div class="nav-outer">
         <ul>
-            <li><a href="#">Customer</a></li>
+            <li><a href="customer.jsp">Customer</a></li>
             <li><a href="#">Order</a></li>
             <li><a href="#">Item</a></li>
             <li><a href="#">Place Order</a></li>

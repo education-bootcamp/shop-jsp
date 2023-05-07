@@ -43,6 +43,17 @@
             </div>
         </div>
     </div>
+    <hr>
+    <table class="table table-hover">
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Salary</td>
+            <td>Delete</td>
+            <td>Update</td>
+        </tr>
+    </table>
 </div>
 
 </body>

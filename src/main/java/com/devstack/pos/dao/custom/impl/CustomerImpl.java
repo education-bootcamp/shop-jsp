@@ -1,6 +1,6 @@
 package com.devstack.pos.dao.custom.impl;
 
-import com.devstack.pos.bo.HibernateUtil;
+import com.devstack.pos.db.HibernateUtil;
 import com.devstack.pos.dao.custom.CustomerDao;
 import com.devstack.pos.entity.Customer;
 import org.hibernate.Session;
@@ -32,7 +32,7 @@ public class CustomerImpl implements CustomerDao {
                 selectedCustomer.setAddress(customer.getAddress());
                 selectedCustomer.setSalary(customer.getSalary());
                 session.beginTransaction();
-                session.save(selectedCustomer);
+                session.update(selectedCustomer);
                 session.getTransaction().commit();
                 return;
             }

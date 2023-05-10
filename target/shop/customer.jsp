@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 
 <div class="container" style="margin-top: 50px">
     <div class="row">
@@ -39,7 +39,9 @@
         <div class="col-12">
             <br>
             <div style="display: flex; justify-content: flex-end">
-                <button type="submit" class="btn btn-primary btn-sm">Save Customer</button>
+                <button type="button"
+                        onclick="saveCustomer()"
+                        class="btn btn-primary btn-sm">Save Customer</button>
             </div>
         </div>
     </div>
@@ -55,6 +57,27 @@
         </tr>
     </table>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+    const saveCustomer = () => {
+        $.ajax({
+            url: 'http://localhost:8080/customer',
+            method: 'POST',
+            data_type:'json',
+            data: {
+                id:$('#customerId').val(),
+                name:$('#name').val(),
+                address:$('#address').val(),
+                salary:$('#salary').val(),
+            },
+            success: function (response) {
+                console.log(response);
+            }
+        })
+    }
+
+</script>
 
 </body>
 </html>

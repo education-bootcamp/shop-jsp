@@ -64,7 +64,13 @@
         $.ajax({
             url: 'http://localhost:8080/customer',
             method: 'POST',
-            data: {},
+            data_type:'json',
+            data: {
+                id:$('#customerId').val(),
+                name:$('#name').val(),
+                address:$('#address').val(),
+                salary:$('#salary').val(),
+            },
             success: function (response) {
                 console.log(response);
             }
